@@ -31,7 +31,7 @@ class Lesson extends Component {
             src={`https://codesandbox.io/embed/my59mjx84y?forcerefresh=1&view=split&verticallayout=1&editorsize=45`}
             title="test_lesson"
             width="95%"
-            height="890px"
+            height="885px"
             border="0"
             border-radius="4px"
             overflow="hidden"
