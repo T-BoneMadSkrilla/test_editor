@@ -26,7 +26,7 @@ class Horizontal extends Component {
         </div>
         <div className="horeditor">
           <iframe
-            src={`https://codesandbox.io/embed/my59mjx84y?forcerefresh=1&view=split&verticallayout=0&editorsize=55`}
+            src={`https://codesandbox.io/embed/my59mjx84y?forcerefresh=1&view=split&verticallayout=0&editorsize=50`}
             title="test_lesson"
             width="100%"
             height="890px"

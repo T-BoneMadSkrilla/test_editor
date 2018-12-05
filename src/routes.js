@@ -9,7 +9,7 @@ import lp3 from "./components/lesson_test/lp3";
 export default (
   <Switch>
     <Route path="/" exact component={Overview} />
-    <Route path="/vertical" component={Lesson} />
+    <Route path="/lesson" component={Lesson} />
     <Route path="/horizontal" component={lp1} />
     <Route path="/wide" component={lp2} />
     <Route path="/tetris" component={lp3} />
