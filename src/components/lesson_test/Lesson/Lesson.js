@@ -15,7 +15,9 @@ class Lesson extends Component {
         "now watch me oooooo crank that soulja boi",
         "pop, lock, and drop it"
       ],
-      iframe: "my59mjx84y"
+      // iframe: "my59mjx84y"
+      iframe: "30l5vp4jqq",
+      module: "/src/App.js"
     };
     this.onClose = this.onClose.bind(this);
     this.onOpen = this.onOpen.bind(this);
@@ -170,7 +172,9 @@ class Lesson extends Component {
           <iframe
             src={`https://codesandbox.io/embed/${
               this.state.iframe
-            }?forcerefresh=1&view=split&verticallayout=0&editorsize=50`}
+            }?forcerefresh=1&view=split&verticallayout=0&editorsize=50&module=${
+              this.state.module
+            }`}
             title="test_lesson"
             width="100%"
             height="890px"
