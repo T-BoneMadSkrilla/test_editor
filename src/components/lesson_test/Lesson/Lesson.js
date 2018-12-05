@@ -1,15 +1,46 @@
 import React, { Component } from "react";
 import ScrollArea from "react-scrollbar";
+import Goals from "./Goals";
 
-class Horizontal extends Component {
+class Lesson extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = { goals: false, title: "Title" };
+    this.onClose = this.onClose.bind(this);
+    this.onOpen = this.onOpen.bind(this);
+  }
+
+  componentDidMount() {
+    this.showGoals();
+  }
+
+  showGoals = () => {
+    this.setState({ goals: true });
+  };
+
+  hideGoals = () => {
+    this.setState({ goals: false });
+  };
+
+  onClose() {
+    this.hideGoals();
+  }
+
+  onOpen() {
+    this.showGoals();
   }
 
   render() {
     return (
       <div className="container">
+        {this.state.goals ? (
+          <Goals
+            onClose={this.onClose}
+            onOpen={this.onOpen}
+            title={this.state.title}
+            number={this.state.number}
+          />
+        ) : null}
         <ScrollArea
           speed={0.8}
           className="area"
@@ -18,16 +49,15 @@ class Horizontal extends Component {
         >
           <div className="content">
             <div className="titlebox">
-              <h1>Title</h1>
-              <a
-                href="https://reactjs.org/docs/components-and-props.html"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                React Component Docs
-              </a>
+              <h1>{this.state.title}</h1>
             </div>
-            <h2>Lesson Content</h2>
+            <a
+              href="https://reactjs.org/docs/components-and-props.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              React Component Docs
+            </a>
             <p>
               Before you can begin to determine what the composition of a
               particular paragraph will be, you must first decide on an argument
@@ -147,4 +177,4 @@ class Horizontal extends Component {
   }
 }
 
-export default Horizontal;
+export default Lesson;
