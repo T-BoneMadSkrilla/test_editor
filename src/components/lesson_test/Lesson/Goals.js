@@ -37,6 +37,19 @@ class Goals extends Component {
   }
 
   render() {
+    let goalsDisplay = this.props.goals.map((e, i) => {
+      return (
+        <div>
+          <div key={i}>
+            <p>
+              {i + 1}: {e}
+            </p>
+          </div>
+          <br />
+        </div>
+      );
+    });
+
     return (
       <div>
         <div className="modal-overlay-div" />
@@ -48,6 +61,14 @@ class Goals extends Component {
             <h1>
               Lesson {this.props.number}: {this.props.title}
             </h1>
+            <br />
+            <h2>What You Will Learn:</h2>
+            <br />
+            {goalsDisplay}
+            <h2>Click anywhere to start!</h2>
+            <br />
+            <br />
+            <button>Back To Lessons</button>
           </div>
         </div>
       </div>
